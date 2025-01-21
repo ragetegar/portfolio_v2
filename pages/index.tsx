@@ -14,8 +14,6 @@ import ScrollUp from "../assets/scrollup.webp";
 import fs from "fs";
 import path from "path";
 
-export const runtime = 'edge';
-
 
 interface IHomeProps {
   jobs: IJobs[];

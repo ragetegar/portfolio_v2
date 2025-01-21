@@ -45,9 +45,6 @@ export const Navbar: NextPage<INavbarProps> = ({ onNavItemClick = () => {}, swit
           <p className="navbar_list_item" onClick={() => onNavItemClick(SECTION.SKILLS)}>
             Skills
           </p>
-          <p className="navbar_list_item" onClick={() => onNavItemClick(SECTION.CONTACT)}>
-            Contact
-          </p>
         </div>
       </nav>
 
@@ -63,9 +60,6 @@ export const Navbar: NextPage<INavbarProps> = ({ onNavItemClick = () => {}, swit
         </p>
         <p className="sidebar_item" onClick={() => onNavItemClick(SECTION.SKILLS)}>
           Skills
-        </p>
-        <p className="sidebar_item" onClick={() => onNavItemClick(SECTION.CONTACT)}>
-          Contact
         </p>
       </div>
     </>
