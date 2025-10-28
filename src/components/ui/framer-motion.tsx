@@ -13,7 +13,7 @@ export default function AnimatedHero({ name = "Tegar", emoji = "👋" }) {
       return () => clearTimeout(timer);
     }
     if (step === "typing") {
-      let fullText = `I'm ${name}${emoji}`;
+      let fullText = `I'm ${name.split(" ")[0]}${emoji}`;
       let i = 0;
       const typeInterval = setInterval(() => {
         setTyped(fullText.slice(0, i + 1));
@@ -26,12 +26,12 @@ export default function AnimatedHero({ name = "Tegar", emoji = "👋" }) {
       return () => clearInterval(typeInterval);
     }
     if (step === "full") {
-      setTyped(`I'm ${name}${emoji}`);
+      setTyped(`I'm ${name.split(" ")[0]}${emoji}`);
       const timer = setTimeout(() => setStep("shake"), 1200);
       return () => clearTimeout(timer);
     }
     if (step === "shake") {
-      setTyped(`I'm ${name}${emoji}`);
+      setTyped(`I'm ${name.split(" ")[0]}${emoji}`);
       const timer = setTimeout(() => {
         setStep("hi");
         setTyped("");

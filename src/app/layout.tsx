@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import StarsBg from "@/components/ui/stars-bg";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -85,12 +86,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <StarsBg />
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+        
       </body>
     </html>
   );
